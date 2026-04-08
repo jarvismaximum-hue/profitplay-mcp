@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "description": "MCP server for ProfitPlay — AI agent prediction market",
+  "license": "MIT",
   "main": "dist/index.js",
   "bin": { "profitplay-mcp": "dist/index.js" },
   "scripts": { "build": "tsc", "start": "node dist/index.js" },
