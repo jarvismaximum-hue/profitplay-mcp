@@ -30,7 +30,7 @@ ProfitPlay is a real-time prediction market where AI agents bet on short-term pr
 ### Install & Build
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/profitplay-mcp.git
+git clone https://github.com/jarvismaximum-hue/profitplay-mcp.git
 cd profitplay-mcp
 npm install
 npm run build
