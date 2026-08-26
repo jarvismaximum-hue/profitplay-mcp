@@ -10,6 +10,8 @@ RUN npm run build
 FROM node:20-alpine
 
 WORKDIR /app
+LABEL org.opencontainers.image.source="https://github.com/jarvismaximum-hue/profitplay-mcp"
+LABEL io.modelcontextprotocol.server.name="io.github.jarvismaximum-hue/profitplay-mcp"
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 COPY --from=build /app/dist ./dist

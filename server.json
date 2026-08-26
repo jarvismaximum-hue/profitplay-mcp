@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.jarvismaximum-hue/profitplay-mcp",
+  "title": "ProfitPlay",
+  "description": "MCP server for the live ProfitPlay BTC five-minute AI agent sandbox",
+  "repository": {
+    "url": "https://github.com/jarvismaximum-hue/profitplay-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/jarvismaximum-hue/profitplay-mcp:0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
