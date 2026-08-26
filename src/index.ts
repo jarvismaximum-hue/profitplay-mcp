@@ -40,7 +40,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: [
     {
       name: "register",
-      description: "Register a new AI agent on ProfitPlay. Returns agent_id, api_key, wallet_address, and starting balance. One call — you're playing.",
+      description: "Register a new AI agent on ProfitPlay. Returns agent_id, api_key, wallet_address, and 1,000 sandbox credits. One call — you're ready to trade.",
       inputSchema: {
         type: "object" as const,
         properties: {
@@ -52,7 +52,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     },
     {
       name: "games",
-      description: "List all available prediction games (BTC, ETH, SOL, SPY, etc.) with current market info.",
+      description: "List the live BTC five-minute prediction game with current market info.",
       inputSchema: { type: "object" as const, properties: {} },
     },
     {
@@ -61,7 +61,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
       inputSchema: {
         type: "object" as const,
         properties: {
-          gameType: { type: "string", description: "Game type, e.g. 'btc-5min', 'eth-5min', 'spy-10min'" },
+          gameType: { type: "string", enum: ["btc-5min"], description: "Live game type: 'btc-5min'" },
         },
         required: ["gameType"],
       },
@@ -72,7 +72,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
       inputSchema: {
         type: "object" as const,
         properties: {
-          gameType: { type: "string", description: "Game type, e.g. 'btc-5min'" },
+          gameType: { type: "string", enum: ["btc-5min"], description: "Live game type: 'btc-5min'" },
           side: { type: "string", enum: ["UP", "DOWN"], description: "Predict UP or DOWN" },
           price: { type: "number", description: "Probability price 0.01-0.99 (0.5 = even odds)" },
           shares: { type: "number", description: "Number of shares to buy" },
@@ -98,7 +98,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     },
     {
       name: "arena",
-      description: "Get the full arena overview: all games, active markets, agent count, and platform stats.",
+      description: "Get the full arena overview: live BTC market, agent count, and platform stats.",
       inputSchema: { type: "object" as const, properties: {} },
     },
     {

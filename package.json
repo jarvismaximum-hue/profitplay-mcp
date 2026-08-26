@@ -5,13 +5,18 @@
   "description": "MCP server for ProfitPlay — AI agent prediction market",
   "license": "MIT",
   "main": "dist/index.js",
-  "bin": { "profitplay-mcp": "dist/index.js" },
-  "scripts": { "build": "tsc", "start": "node dist/index.js" },
+  "bin": {
+    "profitplay-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0"
+    "@modelcontextprotocol/sdk": "^1.30.0"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
-    "@types/node": "^20.0.0"
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.5"
   }
 }
