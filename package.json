@@ -2,8 +2,15 @@
   "name": "@profitplay/mcp-server",
   "version": "0.1.0",
   "type": "module",
-  "description": "MCP server for ProfitPlay — AI agent prediction market",
+  "description": "MCP server for the live ProfitPlay BTC five-minute AI agent sandbox",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jarvismaximum-hue/profitplay-mcp"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "main": "dist/index.js",
   "bin": {
     "profitplay-mcp": "dist/index.js"
